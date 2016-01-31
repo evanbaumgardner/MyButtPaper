@@ -120,7 +120,7 @@ class MenuScene: SKScene, GameViewControllerDelegate {
             if isUnlockedSixthVideo {
                 navigateToPlaybackScene()
             } else {
-                tapPurchaseProductButton(idIapUnlockVideo6)
+             
             }
         } else if focusedButton == .PURCHASE_ALL {
             if isUnlockedThirdVideo && isUnlockedFourthVideo && isUnlockedFifthVideo && isUnlockedSixthVideo {
@@ -148,13 +148,13 @@ class MenuScene: SKScene, GameViewControllerDelegate {
     }
     
     func getIAPStatus() {
-//        isUnlockedThirdVideo = true
-//        isUnlockedFourthVideo = true
-//        isUnlockedFifthVideo = true
-        isUnlockedThirdVideo = userDefaults.boolForKey(keyIsUnlockedVideo3)
-        isUnlockedFourthVideo = userDefaults.boolForKey(keyIsUnlockedVideo4)
-        isUnlockedFifthVideo = userDefaults.boolForKey(keyIsUnlockedVideo5)
-        isUnlockedSixthVideo = userDefaults.boolForKey(keyIsUnlockedVideo6)
+        isUnlockedThirdVideo = true
+        isUnlockedFourthVideo = true
+        isUnlockedFifthVideo = true
+//        isUnlockedThirdVideo = userDefaults.boolForKey(keyIsUnlockedVideo3)
+//        isUnlockedFourthVideo = userDefaults.boolForKey(keyIsUnlockedVideo4)
+//        isUnlockedFifthVideo = userDefaults.boolForKey(keyIsUnlockedVideo5)
+       
 
     }
     
@@ -273,7 +273,7 @@ class MenuScene: SKScene, GameViewControllerDelegate {
             titleVideo3Locked,
             titleVideo4Locked,
             titleVideo5Locked,
-            titleVideo6Locked,
+            
             "Unlock All - $1.99",
             "Restore Purchases"
         ]
@@ -305,9 +305,6 @@ class MenuScene: SKScene, GameViewControllerDelegate {
             allButtons[Button.FIFTH_VIDEO.rawValue].label.text = titleVideo5
         }
         
-        if isUnlockedSixthVideo {
-            allButtons[Button.SIXTH_VIDEO.rawValue].label.text = titleVideo6
-        }
     }
     
     func addBackground() {
